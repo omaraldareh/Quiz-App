@@ -173,15 +173,16 @@ function ShowAnswers() {
             <span class="num">${index + 1}</span> ${option}
         </div>`);
         btn.css({
-            "position": "relative",
-            "display": "flex",
-            "justify-content": "center", 
-            "align-items": "center",
-            "background-color": "white",
-            "padding": "15px",
-            "border-radius": "10px",
-            "cursor": "pointer",
-            "font-size": "19px"
+        "position": "relative",
+        "display": "flex",
+        "justify-content": "flex-start", 
+        "align-items": "center",
+        "background-color": "white",
+        "padding": "15px 15px 15px 50px", 
+        "border-radius": "10px",
+        "cursor": "pointer",
+        "font-size": "19px",
+        "word-break": "break-word"
         })
         btn.find(".num").css({
             "position": "absolute",
@@ -306,7 +307,8 @@ $(".Next").on("click", () => {
         }).then((result) => {
         if (result.isConfirmed) {
             location.reload(); 
-        }
+        }else if (result.dismiss === Swal.DismissReason.cancel) {
+        window.location.href = "about:blank";}
     });
         return; 
     }
