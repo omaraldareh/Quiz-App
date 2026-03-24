@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quiz Questions</title>
+    <style>
+    .option {
+        transition: 0.2s;
+    }
+
+    .option:hover {
+        background-color: rgb(216, 216, 216) !important;
+        transform: scale(1.03);
+    }
+    .Next:hover, .Back:hover {
+    background-color: rgb(216, 216, 216) !important;
+    }
+
+.Back.disabled {
+    background-color: gray;
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none; 
+}
+
+@media (max-width: 600px) {
+    .options {
+        width: 90% !important;
+    }
+
+    .Progress {
+        width: 80% !important;
+    }
+
+    .question {
+        font-size: 18px !important;
+        padding: 20px !important;
+    }
+
+    .Next, .Back {
+        bottom: 10px !important;
+        padding: 10px !important;
+    }
+
+    .Back {
+        right: 80px !important;
+    }
+}
+    </style>
+</head>
+<body style="margin: 0;background-color: rgb(83 183 227);">
+    <!-- <h1>Hello World</h1>
+    <button class="btn">Click</button>
+    <div class="card"></div> -->
+    <div class="Header">
+       Quiz Questions
+    </div>
+    <div style="display: flex;justify-content: center;align-items: center;">
+    <div class="question"></div>
+    </div>
+    <div style="background-color: rgb(83 183 227);">
+    <div class="Progress"></div>
+    </div>
+    <div class="options"></div>
+    <div class="Next">Next</div>
+    <div class="Back">Back</div>
+    <script src="sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
